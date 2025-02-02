@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1f2c 0%, #2d3748 100%);
+    color: #48bb78;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #48bb78;
+    border-radius: 24px;
+    box-shadow: 0 0 40px rgba(72, 187, 120, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 50vh;
+    background: transparent;
+    display: block;
+}
+
+.score-panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(72, 187, 120, 0.4);
+    backdrop-filter: blur(12px);
+    transform: translateZ(0);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
+.category-display {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    border-radius: 16px;
+    margin: 0.5rem auto;
+    max-width: 900px;
+    border: 1px solid rgba(72, 187, 120, 0.4);
+    backdrop-filter: blur(12px);
+    transform: translateZ(0);
+    transition: all 0.3s ease;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(72, 187, 120, 0.4);
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transform: translateZ(0);
+    transition: all 0.3s ease;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.controls-info {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    border-radius: 16px;
+    margin: 1rem auto;
+    max-width: 900px;
+    border: 2px solid rgba(72, 187, 120, 0.4);
+    backdrop-filter: blur(12px);
+}
+
+/* Add to existing CSS */
+.control-card {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin: 1rem auto;
+    max-width: 400px;
+    border: 2px solid rgba(72, 187, 120, 0.4);
+    backdrop-filter: blur(12px);
+    transform: translateZ(0);
+    transition: all 0.3s ease;
+}
+
+.key-hint {
+    display: inline-block;
+    background: rgba(72, 187, 120, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(72, 187, 120, 0.4);
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    color: #4CAF50;
+}
+
+/* Add pulsing animation for key hints */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.key-hint {
+    animation: pulse 2s infinite;
+}
+
+/* Maintain existing animations */
+@keyframes glow {
+    0% { text-shadow: 0 0 15px rgba(72, 187, 120, 0.3); }
+    50% { text-shadow: 0 0 25px rgba(72, 187, 120, 0.6); }
+    100% { text-shadow: 0 0 15px rgba(72, 187, 120, 0.3); }
+}
+
+.glow-text {
+    animation: glow 3s ease-in-out infinite;
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+h1.display-4 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0.5rem;
+    }
+
+    .game-container {
+        margin: 0.5rem;
+    }
+
+    #gameCanvas {
+        height: 40vh;
+    }
+
+    .score-panel {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,5 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15 8 L25 8 L28 15 L12 15 Z" fill="#87CEEB"/>
+    <path d="M12 15 L28 15 L25 35 L15 35 Z" fill="#87CEEB"/>
+    <text x="20" y="25" text-anchor="middle" fill="#FFFFFF" font-size="8">PET</text>
+</svg>

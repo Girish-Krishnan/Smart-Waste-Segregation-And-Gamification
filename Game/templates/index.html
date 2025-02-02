@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothing's Working: How To Throw Things Away</title>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon.svg') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body class="bg-dark">
+    <div class="container-fluid py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <!-- Game Title -->
+                <h1 class="text-success glow-text display-4 mb-4 float-animation">
+                    Nothing's Working:<br>
+                    <span class="text-warning">How To Throw Things Away</span>
+                </h1>
+
+                <!-- Controls Info -->
+                <div class="controls-info mb-4">
+                    <h3 class="text-success mb-3">How to Play:</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="control-card">
+                                <p class="text-warning mb-2">
+                                    <span class="key-hint">◀ ▶</span> Move Left/Right
+                                </p>
+                                <p class="text-info">Catch items matching the category above!</p>
+                                <p class="text-success">Glowing items = Current Category</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Status -->
+                <div class="category-display">
+                    <h2 class="text-warning h3 mb-3">Current Item Type: 
+                        <span id="currentCategory" class="text-success glow-text">Electronics</span>
+                    </h2>
+                    <p class="text-info mb-0">Action Needed: 
+                        <span id="environmentalImpact" class="text-success">
+                            Properly disposing of electronic waste
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Game Canvas and Score -->
+                <div class="game-container">
+                    <canvas id="gameCanvas"></canvas>
+                    <div class="score-panel">
+                        <h3 class="text-success h4">Sorting Score: 
+                            <span id="score" class="glow-text">0</span>
+                        </h3>
+                        <h4 class="text-success h5">Waste Reduced: 
+                            <span id="wasteReduced" class="text-warning">0</span>kg
+                        </h4>
+                        <h4 class="text-success h5">Items Sorted: 
+                            <span id="itemsSorted" class="text-info">0</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- Stats Panel -->
+                <div class="stats-container">
+                    <div class="stat-card float-animation">
+                        <div class="stat-value" id="totalScore">0</div>
+                        <div class="stat-label text-warning">Total Score</div>
+                    </div>
+                    <div class="stat-card float-animation" style="animation-delay: 0.2s">
+                        <div class="stat-value" id="techDeployed">0</div>
+                        <div class="stat-label text-warning">Total Items Sorted</div>
+                    </div>
+                    <div class="stat-card float-animation" style="animation-delay: 0.4s">
+                        <div class="stat-value" id="efficiency">100%</div>
+                        <div class="stat-label text-warning">Sorting Accuracy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/controls.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/socket.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
