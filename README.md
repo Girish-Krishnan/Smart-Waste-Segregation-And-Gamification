@@ -1,5 +1,7 @@
 # Smart Waste Segregation and Gamification
 
+![Labeled Waste Bins](images/labeledBins.jpeg)
+
 ## Inspiration
 The staggering reality of waste management drove us to action:
 - $200 billion spent annually on waste management
@@ -13,12 +15,14 @@ We saw an opportunity to make waste management both automated and educational, t
 Our project combines two innovative components:
 
 1. **Smart Waste Sorter:**
+   ![Raspberry Pi Setup](images/pi.jpeg)
    - Uses computer vision (BLIP) to identify waste items in real-time
    - Automatically opens the correct bin using servo motors
    - Classifies items into E-Waste, Compost, or Recyclable categories
    - Provides instant feedback on waste categorization
 
 2. **Educational Game:**
+   ![Arduino Joystick Controller](images/joystick.jpeg)
    - Space Invaders-style gameplay
    - Players catch falling items matching waste categories
    - Real-time scoring system tracks environmental impact
