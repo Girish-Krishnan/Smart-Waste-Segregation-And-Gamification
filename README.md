@@ -2,7 +2,7 @@
 
 ![Labeled Waste Bins](images/labeledBins.jpeg)
 
-![Demo](https://youtu.be/K040jr_ij-w)
+[Demo Video Link](https://youtu.be/K040jr_ij-w)
 
 ## Inspiration
 The staggering reality of waste management drove us to action:
