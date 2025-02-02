@@ -2,6 +2,8 @@
 
 ![Labeled Waste Bins](images/labeledBins.jpeg)
 
+![Demo](https://youtu.be/K040jr_ij-w)
+
 ## Inspiration
 The staggering reality of waste management drove us to action:
 - $200 billion spent annually on waste management
@@ -141,3 +143,5 @@ http://localhost:5000
    - Environmental impact metrics
 
 We envision scaling this solution to revolutionize waste management education and automation across communities worldwide.
+
+
